@@ -1,7 +1,0 @@
-version: 0.2
-phases:
-  build:
-    commands:
-      - chmod 755 productionbuild.sh
-      - ./productionbuild.sh 
-
