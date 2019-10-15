@@ -18,4 +18,4 @@ services:
       name: redis
       type: pserv
       property: port
-  - fromGroup: conc-settings
+      #  - fromGroup: conc-settings
