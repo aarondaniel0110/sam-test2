@@ -1,7 +1,7 @@
 services:
 # A Docker web service
 - type: web
-  name: webdis
+  name: my-test-webapp2
   env: docker
   repo: https://github.com/aarondaniel0110/render-webapp1.git # optional
   plan: standard              # optional
