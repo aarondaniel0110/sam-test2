@@ -1,0 +1,21 @@
+services:
+# A Docker web service
+- type: web
+  name: webdis
+  env: docker
+  repo: https://github.com/aarondaniel0110/render-webapp1.git # optional
+  plan: standard              # optional
+  branch: master              # optional (uses repo default)
+  healthCheckPath: /
+  envVars:
+  - key: REDIS_HOST
+    fromService:
+      name: redis
+      type: pserv
+      property: host          # available properties are listed below
+  - key: REDIS_PORT
+    fromService:
+      name: redis
+      type: pserv
+      property: port
+  - fromGroup: conc-settings
